@@ -1,0 +1,13 @@
+{% extends 'rest1/layout.html' %}
+{% load static %}
+{% block body %}
+<title>{{ service.title }}</title>
+<body>
+    <div class="container py-5">
+        <h1>{{ service.title }}</h1>
+        <img src="{{ service.image.url }}" class="img-fluid" alt="{{ service.title }}">
+        <p>{{ service.description }}</p>
+        <a href="{% url 'service_list' %}" class="btn btn-secondary">Back to Services</a>
+    </div>
+</body>
+{% endblock %}
